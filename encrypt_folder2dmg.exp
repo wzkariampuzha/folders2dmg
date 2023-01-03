@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+#Setting timeout to -1 means no timeout
+set timeout -1
+set DIRECTORY [lindex $argv 0];
+set PASSWORD [lindex $argv 1];
+set dmg_command "hdiutil create $DIRECTORY.dmg -srcfolder $DIRECTORY -encryption AES-128 -format ULMO -verbose"
+#spawn starts the terminal command
+#eval makes sure that the entirety of dmg_command gets sent to the terminal, without it it would parse only the first word of the command
+eval spawn $dmg_command
+#The * at the end allows any character
+#There is no need for * at beginning because expect matches the first pattern in string
+expect "password*"
+#send_user "\n***** Entering Password for Encryption *****"
+#Not sure what -- do but \r is "return"
+send -- "$PASSWORD\r"
+expect "password*"
+#send_user "\n***** Entering Password for Encryption Again*****"
+send -- "$PASSWORD\r"
+#eof is end of file
+expect eof
