@@ -1,8 +1,3 @@
-# Improve this with this: https://daniel-ellis.medium.com/shell-script-submitting-a-password-after-a-prompt-690bcf144c0e
-## https://bash.cyberciti.biz/guide/$1
-## https://stackoverflow.com/questions/15133474/how-to-use-expect-inside-a-bash-script
-
-
 #!/bin/bash
 HEAD_DIR=$1
 PASSWORD=$2
