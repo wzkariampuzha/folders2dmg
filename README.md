@@ -1,5 +1,5 @@
 # folders2dmg
-These are `bash` and `expect` scripts that automate the process of encrypting and compressing all of the subdirectories in a directory.
+These are `bash` and `expect` scripts that automate the process of encrypting and compressing all of the subdirectories in a directory using the `hdiutil` in MacOS.  
 To use:
 1. Download both into to the same directory
 2. Run from the terminal:  
