@@ -11,7 +11,7 @@ eval spawn $dmg_command
 #There is no need for * at beginning because expect matches the first pattern in string
 expect "password*"
 #send_user "\n***** Entering Password for Encryption *****"
-#Not sure what -- do but \r is "return"
+#Not sure what '--' does but \r is "return"
 send -- "$PASSWORD\r"
 expect "password*"
 #send_user "\n***** Entering Password for Encryption Again*****"
