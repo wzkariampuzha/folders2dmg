@@ -3,4 +3,4 @@ These are `bash` and `expect` scripts that automate the process of encrypting an
 To use:
 1. Download both into to the same directory
 2. Run from the terminal:  
-`sh path_to_script.sh path_to_directory_to_create_disk_image password_for_encryption`
+`sh path_to_script.sh path_to_head_directory_to_create_disk_images_for_each_subdirectory password_for_encryption`
